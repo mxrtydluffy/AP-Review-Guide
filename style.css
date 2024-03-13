@@ -108,13 +108,19 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #01796f;
     border-radius: 6px;
     padding: 10px 25px;
     opacity: 0;
     pointer-events: none;
+}
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-info h2 {
