@@ -10,6 +10,8 @@
 
 body {
     color: #fff;
+    background: #09001d;
+    overflow: hidden;
 }
 
 .header {
@@ -52,14 +54,30 @@ body {
     background: url('./static//background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    /* can't hover over navbar */
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
 }
 
 .home {
+    position: relative;
+    left: -50%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
 }
 
 .home-content {
@@ -157,7 +175,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     font-size: 16px;
-    color: burlywood;
+    color: #fff;
     font-weight: 600;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
@@ -169,7 +187,25 @@ body {
     color: #fff;
 }
 
+.popup-info .btn-group .info-btn:nth-child(1):hover {
+    background: #cd5c5c;
+    color: #fff;
+}
+
 .popup-info .btn-group .info-btn:nth-child(2):hover {
     background: #cd5c5c;
     color: #cd5c5c;
-} 
+}
+
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    background: saddlebrown;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+
+.quiz-section.active {
+    left: 0;
+}
