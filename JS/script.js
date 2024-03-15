@@ -44,10 +44,11 @@ nextBtn.onclick = () => {
         questionNum++;
         questionCounter(questionNum);
 
+        nextBtn.classList.remove('active');
+
     } else {
         console.log('Question Completed')
     }
-    
 }
 
 const optionList = document.querySelector('.option-list')
@@ -94,6 +95,8 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add('disabled');
     }
+
+    nextBtn.classList.add('active');
 }
 
 function questionCounter(index) {

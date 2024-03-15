@@ -337,11 +337,18 @@ body {
     font-weight: 600;
     cursor: pointer;
     /* Currently want it none if no answer is selected  */
-    /* pointer-events: none; */
+    pointer-events: none;
     transition: .5s;
 }
 
-.quiz-footer .next-btn:hover {
-    background: #09001d;
-    border-color: #09001d;
+.quiz-footer .next-btn.active {
+    pointer-events: auto;
+    background: #16526a;
+    border-color: #16526a;
+    color: #fff;
+}
+
+.quiz-footer .next-btn.active:hover {
+    background: #166A58;
+    border-color: #166A58;
 }
