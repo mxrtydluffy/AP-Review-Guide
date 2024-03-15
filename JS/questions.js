@@ -23,10 +23,13 @@ let questions = [
     },
     {
         numb: 3,
-        question: "",
-        answer: "",
+        question: "text",
+        answer: "text",
         options: [
-
+            "A. Text",
+            "A. Text",
+            "A. Text",
+            "A. Text"
         ]
     },
     {
