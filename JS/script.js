@@ -7,6 +7,12 @@ const quizSelection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 
 startBtn.onclick = () => {
+    // Once clicked 'active' will display on class name .start-btn
+    popupInfo.classList.add('active');
+    main.classList.add('active');
+}
+
+exitBtn.onclick = () => {
     // Once clicked 'active' will display on class name .exit-btn
     popupInfo.classList.remove('active');
     main.classList.remove('active');
@@ -21,8 +27,8 @@ continueBtn.onclick = () => {
 
     showQuestions(0);
     questionCounter(1)
-}
 
+}
 
 let questionCount = 0;
 let questionNum = 1;
@@ -40,6 +46,7 @@ nextBtn.onclick = () => {
     } else {
         console.log('Question Completed')
     }
+    
 }
 
 const optionList = document.querySelector('.option-list')
@@ -65,10 +72,24 @@ function showQuestions(index)  {
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
+    let allOptions = optionList.children.length;
+    
     if (userAnswer == correctAnswer) {
         answer.classList.add('correct');
     } else {
-        answer.classList.add('incorrect');    
+        answer.classList.add('incorrect');
+        
+        // If answer incorrect, auto selected correct answer
+        for (let i = 0; i < allOptions; i++) {
+            if (optionList.children[i].textContent == correctAnswer) {
+                optionList.children[i] .setAttribute('class', 'option correct');
+            }
+        }
+    }
+
+    // User selected disable options
+    for (let i = 0; i < allOptions; i++) {
+        optionList.children[i].classList.add('disabled');
     }
 }
 

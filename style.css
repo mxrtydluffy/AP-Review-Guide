@@ -282,7 +282,6 @@ body {
     transition: .3s;
 }
 
-
 .option-list .option:hover {
     background: rgba(225, 225, 225, .1);
     border-color: rgba(225, 225, 225, .1);
@@ -298,6 +297,18 @@ body {
     background: #271300;
     color: #B22222;
     border-color: #B22222;
+}
+
+.option-list .option.disabled {
+    /* Once correct answer is selected, will disable incorrect ones */
+    /* If incorrect answer is selected, then cannot choose other options */
+    pointer-events: none;
+
+}
+
+.option-list .option.disabled {
+    pointer-events: none;
+    
 }
 
 .quiz-box .quiz-footer {
