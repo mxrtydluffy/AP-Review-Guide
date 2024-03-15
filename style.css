@@ -288,6 +288,18 @@ body {
     border-color: rgba(225, 225, 225, .1);
 }
 
+.option-list .option.correct {
+    background: #ffecd0;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+
+.option-list .option.incorrect {
+    background: #271300;
+    color: #B22222;
+    border-color: #B22222;
+}
+
 .quiz-box .quiz-footer {
     display: flex;
     justify-content: space-between;

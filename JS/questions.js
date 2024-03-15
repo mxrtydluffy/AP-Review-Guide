@@ -13,7 +13,7 @@ let questions = [
     {
         numb: 2,
         question: "What is a system in the human body?",
-        answer: " A. Digestive",
+        answer: "A. Digestive",
         options: [
             "A. Digestive",
             "B. Nehronology",
