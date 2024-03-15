@@ -1,3 +1,3 @@
 # Admission Test
 
-Interested in becoming a nurse? Many nursing schools require the TEAS and HESI inorder to qualify for admission. Take it now and see your score!
+Interested working in healthcare? Proficient knowledge in Anatomy & Physiology is a must when working on the floor. Take the test now and see your score!
