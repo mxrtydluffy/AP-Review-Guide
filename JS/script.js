@@ -119,17 +119,18 @@ function showResultBox() {
 
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
-    let progressStartValue = -1;
     let progressEndValue = (userScore / questions.length) * 100;
+    let totalSteps = 100; // Total steps to reach progressEndValue
+    let currentStep = 0;
     let speed = 20;
     
     let progress = setInterval(() => {
-        progressStartValue++;
+        currentStep++;
+        let progressPercentage = (currentStep / totalSteps) * progressEndValue;
+        progressValue.textContent = `${Math.round(progressPercentage)}%`;
+        circularProgress.style.background = `conic-gradient(turquoise ${progressPercentage * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
-        progressValue.textContent = `${progressStartValue}%`;
-        circularProgress.style.background = `conic-gradient(turquoise ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
-
-        if (progressStartValue == progressEndValue) {
+        if (currentStep >= totalSteps) {
             clearInterval(progress);
         }
     }, speed);

@@ -109,4 +109,48 @@ let questions = [
             "D. The ventral cavity includes the cranial and spinal cavities"
         ]
     },
+    {
+        numb: 11,
+        question: "What is the function of cyclic adenosine monophosphate (cAMP)?",
+        answer: "C. Serves as a secondary messenger",
+        options: [
+            "A. Is the part of the cell membrane",
+            "B. Provides energy for the cell",
+            "C. Serves as a secondary messenger",
+            "D. Is an endocrine hormone"
+        ]
+    },
+    {
+        numb: 12,
+        question: "Which organ within the digestive system is a site of both mechanical and chemical digestion?",
+        answer: "C. Stomach",
+        options: [
+            "A. Esophagus",
+            "B. Small intestine",
+            "C. Stomach",
+            "D. Large intestine"
+        ]
+    },
+    {
+        numb: 13,
+        question: "What is the most widely distributed type of sweat gland?",
+        answer: "C. Eccrine",
+        options: [
+            "A. Apocrine",
+            "B. Endocrine",
+            "C. Eccrine",
+            "D. Submucosal"
+        ]
+    },
+    {
+        numb: 14,
+        question: "Which blood vessel returns blood from the systemic circuit to the heart?",
+        answer: "D. 31",
+        options: [
+            "A. Coronary sinus",
+            "B. Aorta",
+            "C. Superior Vena Cava",
+            "D. Pulmonary vein"
+        ]
+    },
 ] 
